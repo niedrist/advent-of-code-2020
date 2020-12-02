@@ -2,7 +2,7 @@ package day1
 
 import util.TextScanner
 
-object Day1 {
+object Solution {
     def main(args: Array[String]) {
         val numbers = TextScanner.readLinesAsInts("src/day1/input.txt")
         println(part1(numbers))
