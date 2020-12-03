@@ -7,6 +7,10 @@ object TextScanner {
     }
 
     def readLinesAsInts(path: String): Array[Int] = {
-        readLines(path).map(x => x.toInt)
+        readLines(path).map(_.toInt)
+    }
+
+    def readLinesAsCharMap(path: String): Array[Array[Char]] = {
+        readLines(path).map(_.toCharArray)
     }
 }
