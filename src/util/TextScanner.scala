@@ -1,9 +1,13 @@
 package util
 
 object TextScanner {
-    def readLines(path: String): Array[String] = {
+    def readText(path: String): String = {
         val source = scala.io.Source.fromFile(path)
-        try source.mkString.split('\n') finally source.close()
+        try source.mkString finally source.close()
+    }
+
+    def readLines(path: String): Array[String] = {
+        readText(path).split('\n')
     }
 
     def readLinesAsInts(path: String): Array[Int] = {
