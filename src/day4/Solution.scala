@@ -10,13 +10,9 @@ object Solution {
         println(part2(passports))
     }
 
-    def part1(passports: Array[Passport]): Long = {
-        passports.count(_.isValid)
-    }
+    def part1(passports: Array[Passport]): Long = passports.count(_.isValid)
 
-    def part2(passports: Array[Passport]): Long = {
-        passports.count(_.hasValidValues)
-    }
+    def part2(passports: Array[Passport]): Long = passports.count(_.hasValidValues)
 
     def parsePassports(input: String): Array[Passport] = {
         input.split("\n\n").map(_.split("[\\n\\s]")).map(passportArray => {

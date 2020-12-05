@@ -12,9 +12,7 @@ object Solution {
         println(part2(boardingPasses))
     }
 
-    def part1(boardingPasses: Array[BoardingPass]): Int = {
-        boardingPasses.maxBy(_.seatId).seatId
-    }
+    def part1(boardingPasses: Array[BoardingPass]): Int = boardingPasses.maxBy(_.seatId).seatId
 
     def part2(boardingPasses: Array[BoardingPass]): Int = {
         val seatIds = boardingPasses.map(_.seatId).to(SortedSet)

@@ -10,13 +10,9 @@ object Solution {
         println(part2(policies))
     }
 
-    def part1(policies: Array[PasswordPolicy]): Int = {
-        policies.count(_.containsCorrectAmountChars)
-    }
+    def part1(policies: Array[PasswordPolicy]): Int = policies.count(_.containsCorrectAmountChars)
 
-    def part2(policies: Array[PasswordPolicy]): Int = {
-        policies.count(_.hasExactPositionOnce)
-    }
+    def part2(policies: Array[PasswordPolicy]): Int = policies.count(_.hasExactPositionOnce)
 
     def parsePolicies(lines: Array[String]): Array[PasswordPolicy] = {
         val policyRegex = """(\d+)-(\d+) (\w): (\w+)""".r

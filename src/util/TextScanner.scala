@@ -6,15 +6,9 @@ object TextScanner {
         try source.mkString finally source.close()
     }
 
-    def readLines(path: String): Array[String] = {
-        readText(path).split('\n')
-    }
+    def readLines(path: String): Array[String] = readText(path).split('\n')
 
-    def readLinesAsInts(path: String): Array[Int] = {
-        readLines(path).map(_.toInt)
-    }
+    def readLinesAsInts(path: String): Array[Int] = readLines(path).map(_.toInt)
 
-    def readLinesAsCharMap(path: String): Array[Array[Char]] = {
-        readLines(path).map(_.toCharArray)
-    }
+    def readLinesAsCharMap(path: String): Array[Array[Char]] = readLines(path).map(_.toCharArray)
 }
