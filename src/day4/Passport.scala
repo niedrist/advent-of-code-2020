@@ -1,18 +1,20 @@
 package day4
 
-import util.Numbers
+import util.ExtendedLong
 
 import scala.collection.mutable
 
 class Passport {
+    import ExtendedLong._
+
     private val requiredIdentifiers = Array("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
 
     private val fields = new mutable.HashMap[String, String]()
 
     private val rules: mutable.HashMap[String, String => Boolean] = mutable.HashMap(
-        "byr" -> {x => Numbers.isBetween(x.toInt, 1920, 2002)},
-        "iyr" -> (x => Numbers.isBetween(x.toInt, 2010, 2020)),
-        "eyr" -> (x => Numbers.isBetween(x.toInt, 2020, 2030)),
+        "byr" -> ( _.toInt.isBetween(1920, 2002)),
+        "iyr" -> ( _.toInt.isBetween(2010, 2020)),
+        "eyr" -> ( _.toInt.isBetween(2020, 2030)),
         "hgt" -> (x => {
             "1([5-8][0-9]|9[0-3])cm".r.pattern.matcher(x).matches() ||
             "(59|6[0-9]|7[0-6])in".r.pattern.matcher(x).matches()
