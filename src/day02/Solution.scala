@@ -1,10 +1,10 @@
-package day2
+package day02
 
 import util.TextScanner
 
 object Solution {
     def main(args: Array[String]): Unit = {
-        val lines = TextScanner.readLines("src/day2/input.txt")
+        val lines = TextScanner.readLines("src/day02/input.txt")
         val policies = parsePolicies(lines)
         println(part1(policies))
         println(part2(policies))

@@ -1,4 +1,4 @@
-package day6
+package day06
 
 import util.TextScanner
 
@@ -6,7 +6,7 @@ import scala.collection.mutable
 
 object Solution {
     def main(args: Array[String]): Unit = {
-        val text = TextScanner.readText("src/day6/input.txt")
+        val text = TextScanner.readText("src/day06/input.txt")
         val allAnswers = text.split("\n\n").map(_.split('\n'))
         println(part1(allAnswers))
         println(part2(allAnswers))

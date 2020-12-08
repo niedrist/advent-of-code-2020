@@ -1,10 +1,10 @@
-package day3
+package day03
 
 import util.TextScanner
 
 object Solution {
     def main(args: Array[String]): Unit = {
-        val map = TextScanner.readLinesAsCharMap("src/day3/input.txt")
+        val map = TextScanner.readLinesAsCharMap("src/day03/input.txt")
         println(part1(map))
         println(part2(map))
     }

@@ -1,4 +1,4 @@
-package day5
+package day05
 
 import util.TextScanner
 
@@ -6,7 +6,7 @@ import scala.collection.SortedSet
 
 object Solution {
     def main(args: Array[String]): Unit = {
-        val lines = TextScanner.readLines("src/day5/input.txt")
+        val lines = TextScanner.readLines("src/day05/input.txt")
         val boardingPasses = lines.map(parseBoardingPass)
         println(part1(boardingPasses))
         println(part2(boardingPasses))

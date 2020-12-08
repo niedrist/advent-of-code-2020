@@ -1,10 +1,10 @@
-package day1
+package day01
 
 import util.TextScanner
 
 object Solution {
     def main(args: Array[String]) {
-        val numbers = TextScanner.readLinesAsInts("src/day1/input.txt")
+        val numbers = TextScanner.readLinesAsInts("src/day01/input.txt")
         println(part1(numbers))
         println(part2(numbers))
     }

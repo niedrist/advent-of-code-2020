@@ -1,4 +1,4 @@
-package day2
+package day02
 
 class PasswordPolicy(var min: Int, var max: Int, var char: Char, var password: String) {
     def containsCorrectAmountChars: Boolean = {

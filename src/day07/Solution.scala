@@ -1,4 +1,4 @@
-package day7
+package day07
 
 import java.util.Optional
 
@@ -12,7 +12,7 @@ object Solution {
     val myBagColor = "shiny gold"
 
     def main(args: Array[String]): Unit = {
-        val lines = TextScanner.readLines("src/day7/input.txt")
+        val lines = TextScanner.readLines("src/day07/input.txt")
         parseRules(lines)
         println(part1(rules))
         println(part2(rules))
