@@ -17,7 +17,6 @@ object Solution {
 
     def part2(instructions: Array[Instruction]): Int = runFixedProgram(instructions)
 
-
     def runFixedProgram(instructions: Array[Solution.Instruction]): Int = {
         for (i <- instructions.indices) {
             if (instructions(i).switchable) {
