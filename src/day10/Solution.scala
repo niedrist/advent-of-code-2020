@@ -3,6 +3,7 @@ package day10
 import util.TextScanner
 
 import scala.collection.mutable
+import scala.language.implicitConversions
 
 object Solution {
 
@@ -16,14 +17,8 @@ object Solution {
     }
 
     def part1(): Int = {
-        var previous = joltages(0)
-        var count1, count3 = 0
-        for (i <- 1 until joltages.length) {
-            if (previous == joltages(i) - 1) count1 = count1 + 1
-            if (previous == joltages(i) - 3) count3 = count3 + 1
-            previous = joltages(i)
-        }
-        count1 * count3
+        val diff = joltages.zip(joltages.tail).map(x => x._2 - x._1)
+        diff.count(_ == 1) * diff.count(_ == 3)
     }
 
     def part2(): Long = countPossibilities(0)
